@@ -1,50 +1,68 @@
-# Welcome to your Expo app 👋
+# Mobile App gerencimento de vendas👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Disciplina: 9002 - PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS EM ANDROID
 
-## Get started
+### Aluna: Jerrayne Rodrigues de Sousa
 
-1. Install dependencies
+### Professora: Josyane
 
-   ```bash
-   npm install
-   ```
+## Sobre o projeto
 
-2. Start the app
+Este projeto foi desenvolvido para atender às necessidades de uma pequena empresa local que realiza vendas no Mercado Livre e iFood. Sabemos que muitos empreendedores enfrentam dificuldades ao lidar com sistemas complexos para acompanhar suas vendas. Pensando nisso, criamos uma solução que se conecta às APIs dessas plataformas e proporciona uma visão clara e intuitiva das vendas, simplificando o acesso a informações como volume de vendas, produtos em alta, e desempenho financeiro. Nosso objetivo é facilitar a gestão de vendas para pessoas que não possuem familiaridade com sistemas, tornando os dados mais acessíveis e úteis para tomadas de decisão.
 
-   ```bash
-    npx expo start
-   ```
+### Nota sobre o Projeto
 
-In the output, you'll find options to open the app in a
+<small>Este aplicativo foi desenvolvido com o propósito de estudo e demonstração de conceitos em desenvolvimento mobile. Atualmente, ele não implementa um banco de dados real nem a integração com as APIs do Mercado Livre e iFood. A estrutura foi projetada para simular uma interface intuitiva e funcionalidades básicas que poderiam ser expandidas em um projeto real. O objetivo é oferecer uma visão inicial de como um sistema desse tipo poderia ser utilizado por pequenos empreendedores para acompanhar suas vendas de forma simplificada.</small>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Tecnologias Utilizadas
 
-## Get a fresh project
+**React Native:** para o desenvolvimento da interface mobile
+**Expo:** para simplificar o desenvolvimento e testes
+**SQLite:** para um banco de dados local
+**API REST (conceitual):** estrutura para integração com Mercado Livre e iFood
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+## Funcionalidades
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **Visão geral das vendas**
+* **Produtos mais vendidos**
+* **Análise de desempenho por período**
+* **Interface intuitiva para facilitar o acesso a dados de vendas**
 
-## Learn more
+## Estrutura do Projeto
+<small>
+src/
+├── app/                      # Pasta principal das telas (Expo Router)
+│   ├── _layout.js           # Layout base da aplicação
+│   ├── Analise.js           # Tela de análise de vendas
+│   ├── Estoque.js           # Tela de gestão de estoque
+│   ├── HomeScreen.js        # Tela inicial
+│   └── Vendas.js           # Tela de vendas
+│
+├── database/                # Configurações do banco de dados
+│   ├── index.js            # Configuração inicial do banco
+│   └── schema.js           # Esquema/estrutura das tabelas
+│
+├── routes/                  # Configurações de navegação
+│   └── drawerroutes.tsx    # Configuração do menu lateral
+│
+├── services/               # Camada de serviços
+│   ├── EstoqueService.js   # Lógica de negócio do estoque
+│   └── VendasService.js    # Lógica de negócio das vendas
+│
+└── theme/                  # Configurações visuais
+    └── theme.js            # Tema global (cores, estilos, etc)</small>
 
-To learn more about developing your project with Expo, look at the following resources:
+## Como Executar o Projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Clone o repositório
+Instale as dependências com '''npm install'''
+Inicie o Expo com '''expo start'''
 
-## Join the community
+## Possíveis Expansões Futuras
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* **Integração real com as APIs do Mercado Livre e iFood**
+* **Armazenamento de dados em um banco de dados real**
+* **Painéis de relatórios mais avançados para análise de vendas**
