@@ -14,6 +14,10 @@ Este projeto foi desenvolvido para atender às necessidades de uma pequena empre
 
 <small>Este aplicativo foi desenvolvido com o propósito de estudo e demonstração de conceitos em desenvolvimento mobile. Atualmente, ele não implementa um banco de dados real nem a integração com as APIs do Mercado Livre e iFood. A estrutura foi projetada para simular uma interface intuitiva e funcionalidades básicas que poderiam ser expandidas em um projeto real. O objetivo é oferecer uma visão inicial de como um sistema desse tipo poderia ser utilizado por pequenos empreendedores para acompanhar suas vendas de forma simplificada.</small>
 
+# Veja o aplicativo em ação
+
+
+[Video-App-IOS.mp4]C:\Users\BlueShift\Desktop\Estacioteste\teste\Video-App-IOS.mp4
 ---
 
 ## Tecnologias Utilizadas
@@ -32,34 +36,14 @@ Este projeto foi desenvolvido para atender às necessidades de uma pequena empre
 * **Interface intuitiva para facilitar o acesso a dados de vendas**
 
 ## Estrutura do Projeto
-<small>
-src/
-├── app/                      # Pasta principal das telas (Expo Router)
-│   ├── _layout.js           # Layout base da aplicação
-│   ├── Analise.js           # Tela de análise de vendas
-│   ├── Estoque.js           # Tela de gestão de estoque
-│   ├── HomeScreen.js        # Tela inicial
-│   └── Vendas.js           # Tela de vendas
-│
-├── database/                # Configurações do banco de dados
-│   ├── index.js            # Configuração inicial do banco
-│   └── schema.js           # Esquema/estrutura das tabelas
-│
-├── routes/                  # Configurações de navegação
-│   └── drawerroutes.tsx    # Configuração do menu lateral
-│
-├── services/               # Camada de serviços
-│   ├── EstoqueService.js   # Lógica de negócio do estoque
-│   └── VendasService.js    # Lógica de negócio das vendas
-│
-└── theme/                  # Configurações visuais
-    └── theme.js            # Tema global (cores, estilos, etc)</small>
+
+![alt text](image.png)
 
 ## Como Executar o Projeto
 
 Clone o repositório
-Instale as dependências com '''npm install'''
-Inicie o Expo com '''expo start'''
+Instale as dependências com 'npm install'
+Inicie o Expo com 'expo start'
 
 ## Possíveis Expansões Futuras
 

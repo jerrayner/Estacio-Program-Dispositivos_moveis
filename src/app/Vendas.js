@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Modal } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { theme, commonStyles } from '../theme/theme';
@@ -84,42 +84,42 @@ export default function Vendas() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterContainer}>
         <TouchableOpacity 
           style={[
-            commonStyles.filterButton,
-            activeFilter === 'all' && commonStyles.filterButtonActive
+            styles.filterTab,
+            activeFilter === 'all' && styles.filterTabActive
           ]}
           onPress={() => setActiveFilter('all')}
         >
           <Text style={[
-            commonStyles.filterButtonText,
-            activeFilter === 'all' && commonStyles.filterButtonTextActive
+            styles.filterText,
+            activeFilter === 'all' && styles.filterTextActive
           ]}>
             Todas
           </Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style={[
-            commonStyles.filterButton,
-            activeFilter === 'process' && commonStyles.filterButtonActive
+            styles.filterTab,
+            activeFilter === 'process' && styles.filterTabActive
           ]}
           onPress={() => setActiveFilter('process')}
         >
           <Text style={[
-            commonStyles.filterButtonText,
-            activeFilter === 'process' && commonStyles.filterButtonTextActive
+            styles.filterText,
+            activeFilter === 'process' && styles.filterTextActive
           ]}>
             Em Processo
           </Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style={[
-            commonStyles.filterButton,
-            activeFilter === 'completed' && commonStyles.filterButtonActive
+            styles.filterTab,
+            activeFilter === 'completed' && styles.filterTabActive
           ]}
           onPress={() => setActiveFilter('completed')}
         >
           <Text style={[
-            commonStyles.filterButtonText,
-            activeFilter === 'completed' && commonStyles.filterButtonTextActive
+            styles.filterText,
+            activeFilter === 'completed' && styles.filterTextActive
           ]}>
             Concluídas
           </Text>
@@ -127,7 +127,7 @@ export default function Vendas() {
       </ScrollView>
 
       {/* Modal de Seleção de Data */}
-      <Modal
+      <View
         visible={isDatePickerVisible}
         transparent={true}
         animationType="fade"
@@ -156,7 +156,7 @@ export default function Vendas() {
             </TouchableOpacity>
           </View>
         </TouchableOpacity>
-      </Modal>
+      </View>
 
       {/* Lista de Vendas */}
       <ScrollView style={styles.transactionsList}>
@@ -169,7 +169,30 @@ export default function Vendas() {
 const styles = StyleSheet.create({
   filterContainer: {
     paddingHorizontal: theme.spacing.lg,
-    marginBottom: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+    marginTop: theme.spacing.sm,
+  },
+  filterTab: {
+    paddingHorizontal: theme.spacing.lg,
+    paddingVertical: theme.spacing.sm,
+    marginRight: theme.spacing.md,
+    borderRadius: 30,
+    backgroundColor: '#F5F5F5',
+    minWidth: 90,
+    height: 36,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filterTabActive: {
+    backgroundColor: theme.colors.primary,
+  },
+  filterText: {
+    fontSize: 14,
+    color: '#666666',
+    fontWeight: '400',
+  },
+  filterTextActive: {
+    color: '#FFFFFF',
   },
   dateFilterButton: {
     flexDirection: 'row',
