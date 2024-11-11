@@ -6,12 +6,20 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "skipLibCheck": true,
+    "types": ["tough-cookie"]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "src/app/Estoque.js",
+    "src/app/HomeScreen.js",
+    "src/app/Vendas.js",
+    "src/app/Analise.js",
+    "src/app/layout.js"
+  ],
+  "exclude": [
+    "node_modules/tough-cookie"
   ]
 }
