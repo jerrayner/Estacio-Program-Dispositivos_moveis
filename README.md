@@ -16,8 +16,7 @@ Este projeto foi desenvolvido para atender às necessidades de uma pequena empre
 
 # Veja o aplicativo em ação
 
-
-[Video-App-IOS.mp4]C:\Users\BlueShift\Desktop\Estacioteste\teste\Video-App-IOS.mp4
+![Demo do App](./assets/Animação.gif)
 ---
 
 ## Tecnologias Utilizadas
